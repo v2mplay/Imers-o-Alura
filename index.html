@@ -132,9 +132,14 @@
                     </li>
                 </ul>
             </div>
-            <div id="resultado" style="display: none;"></div>
-            <button onclick="Tentarnovamente()" id="tentativa" style="display: none;" class="tentar">Tentar Novamente</button>
-        </div>
+            <div id="divmensagem" style="color: aliceblue;
+            display: flex;
+            text-align: center;
+            font-size: 126%;
+            margin-left: 24%;"></div>
+            <button onclick="Tentarnovamente()" id="tentativa" style="display: none;" class="tentar">Tentar
+                Novamente</button>
+
         </div>
     </main>
 </body>
@@ -236,15 +241,19 @@
 
         mostrarPergunta7.style.display = 'none';
         tentativa.style.display = 'flex';
+        divmensagem.style.display = 'flex';
+        divmensagem.innerHTML += `
+    Você acertou ${acertos} pergunta <br>
+    E errou ${erros} pergunta`;
+
+        console.log(divmensagem);
 
     }
 
     function Tentarnovamente() {
-
-        return acertos;
-        return erros;
-
         tentativa.style.display = 'none';
         mostrarPergunta1.style.display = 'flex';
+        divmensagem.style.display = 'none';
+
     }
 </script>
