@@ -34,11 +34,22 @@ li {
 }
 
 /*conteudo main*/
+
+
+main {
+    margin-bottom: -1%;
+    margin-right: 7px
+}
+
+.som{
+display: none;
+}
+
 .slideImagem {
     overflow: hidden;
     width: 106%;
     height: 554px;
-    margin-left: -67px;
+    margin-left: -65px;
     display: flex;
     justify-content: space-between;
 }
@@ -62,18 +73,33 @@ li {
     }
 }
 
-/*.slideImagem img {
-    float: left;
-    width: 400px;
-    height: 200px;
-    animation: slide 5s infinite;
-  }
+.caixaPai{
+    background-color: black;
+    color: aliceblue;
+    position: absolute;
+    z-index: 1;
+    margin-top: -34%;
+    margin-left: 31%;
+    width: 30%;
+    height: 52%;
+    text-align: center;
+    opacity: 95%;
+    border-radius: 11%;
+}
 
-  @keyframes slideImagem {
-    0% {
-      margin-left: 0;
-    }
-    100% {
-      margin-left: -100%;
-    }
-  }
+.iniciarQuiz{
+    border-radius: 20px;
+    border: 0px;
+    width: 59%;
+    height: 18%;
+    font-size: 117%;
+    margin-top: 0%;
+    background-color: green;
+
+}
+
+.tituloquiz{
+    display: flex;
+    margin-top: 25%;
+    margin-left: 134px;
+}
