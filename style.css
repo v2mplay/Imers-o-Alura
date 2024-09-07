@@ -41,22 +41,22 @@ main {
     margin-right: 7px
 }
 
-.som{
-display: none;
+.som {
+    display: none;
 }
 
 .slideImagem {
     overflow: hidden;
-    width: 106%;
+    width: 108%;
     height: 554px;
-    margin-left: -65px;
+    margin-left: -80px;
     display: flex;
     justify-content: space-between;
 }
 
 .slideImagem img {
     float: left;
-    width: 96%;
+    width: 95%;
     background-size: cover;
     height: 105%;
     animation: slideImagem 20s infinite;
@@ -73,37 +73,96 @@ display: none;
     }
 }
 
-.caixaPai{
+.caixaPai {
     background-color: black;
     color: aliceblue;
     position: absolute;
     z-index: 1;
     margin-top: -34%;
-    margin-left: 31%;
-    width: 30%;
-    height: 52%;
+    margin-left: 33%;
+    width: 29%;
+    height: 47%;
     text-align: center;
     opacity: 95%;
     border-radius: 11%;
+    font-size: 102%;
 }
 
-.iniciarQuiz{
+.inicializando {
     border-radius: 20px;
     border: 0px;
     width: 59%;
     height: 18%;
     font-size: 117%;
-    margin-top: 0%;
+    margin-top: 7%;
     background-color: green;
 
 }
 
-.tituloquiz{
+.tituloquiz {
     display: flex;
-    margin-top: 25%;
+    margin-top: 67px;
     margin-left: 134px;
 }
 
-.quiz-hidden{
+.quiz-hidden1 {
     display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quiz-hidden2 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quiz-hidden3 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quiz-hidden4 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quiz-hidden5 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quiz-hidden6 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quiz-hidden7 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tentar {
+    border-radius: 20px;
+    border: 0px;
+    width: 52%;
+    height: 11%;
+    font-size: 125%;
+    margin-top: 35%;
+    background-color: green;
+    margin-left: 24%;
+    justify-content: center;
+    align-items: center;
 }

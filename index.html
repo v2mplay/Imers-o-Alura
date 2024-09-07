@@ -36,108 +36,215 @@
 
         <div class="caixaPai" id="painelQuiz">
             <h2 class="tituloquiz">QUIZ TWD</h2>
-            <button class="iniciarQuiz" onclick="iniciarQuiz">Iniciar Quiz</button>
-            <div class="quiz-hidden">
+
+            <button onclick="comecando()" class="inicializando" id="comecarQuiz">Iniciar Quiz</button>
+            <div class="quiz-hidden1" id="mostrarPergunta1">
                 <p>Pergunta 1: Quem foi o primeiro personagem principal a aparecer em The Walking Dead?</p>
                 <ul>
                     <li>
-                        <input type="radio" name="q1" value="Rick Grimes"> Rick Grimes
+                        <input onclick="passar1(1)" type="radio" name="q1" value="Rick Grimes"> Rick Grimes
                     </li>
                     <li>
-                        <input type="radio" name="q1" value="Daryl Dixon"> Daryl Dixon
+                        <input onclick="passar1(2)" type="radio" name="q1" value="Daryl Dixon"> Daryl Dixon
                     </li>
                     <li>
-                        <input type="radio" name="q1" value="Lori Grimes"> Lori Grimes
+                        <input onclick="passar1(3)" type="radio" name="q1" value="Lori Grimes"> Lori Grimes
                     </li>
                 </ul>
             </div>
-            <div class="quiz-hidden">
+            <div class="quiz-hidden2" id="mostrarPergunta2">
                 <p>Pergunta 2: Qual era a profissão de Rick Grimes antes do apocalipse?</p>
                 <ul>
                     <li>
-                        <input type="radio" name="q2" value="Policial"> Policial
+                        <input onclick="passar2(1)" type="radio" name="q2" value="Policial"> Policial
                     </li>
                     <li>
-                        <input type="radio" name="q2" value="Médico"> Médico
+                        <input onclick="passar2(2)" type="radio" name="q2" value="Médico"> Médico
                     </li>
                     <li>
-                        <input type="radio" name="q2" value="Professor"> Professor
+                        <input onclick="passar2(3)" type="radio" name="q2" value="Professor"> Professor
                     </li>
                 </ul>
             </div>
-            <div class="quiz-hidden"></div>
-            <p>Pergunta 3: Qual era o nome da fazenda onde Hershel Greene vivia?</p>
-            <ul>
-                <li>
-                    <input type="radio" name="q3" value="Verdadeiro"> Fazenda Greene
-                </li>
-                <li>
-                    <input type="radio" name="q3" value="Falso"> Fazenda Wilson
-                </li>
-            </ul>
+            <div class="quiz-hidden3" id="mostrarPergunta3">
+                <p>Pergunta 3: Qual era o nome da fazenda onde Hershel Greene vivia?</p>
+                <ul>
+                    <li>
+                        <input onclick="passar3(1)" type="radio" name="q3" value="Verdadeiro"> Fazenda Greene
+                    </li>
+                    <li>
+                        <input onclick="passar3(2)" type="radio" name="q3" value="Falso"> Fazenda Wilson
+                    </li>
+                </ul>
+            </div>
+            <div class="quiz-hidden4" id="mostrarPergunta4">
+                <p>Pergunta 4: Quem era a irmã de Maggie?</p>
+                <ul>
+                    <li>
+                        <input onclick="passar4(1)" type="radio" name="q4" value="Beth Greene">Beth Greene
+                    </li>
+                    <li>
+                        <input onclick="passar4(2)" type="radio" name="q4" value="Beth Greene">Carol Peletier
+                    </li>
+                    <li>
+                        <input onclick="passar4(3)" type="radio" name="q4" value="Sasha Williams">Sasha Williams
+                    </li>
+                </ul>
+            </div>
+            <div class="quiz-hidden5" id="mostrarPergunta5">
+                <p>Pergunta 5: Qual personagem era médico antes do apocalipse?</p>
+                <ul>
+                    <li>
+                        <input onclick="passar5(1)" type="radio" name="q5" value="Verdadeiro">Hershel Greene
+                    </li>
+                    <li>
+                        <input onclick="passar5(2)" type="radio" name="q5" value="Falso">Eugene Porter
+                    </li>
+                </ul>
+            </div>
+            <div class="quiz-hidden6" id="mostrarPergunta6">
+                <p>Pergunta 6: Qual foi o nome do episódio em que Negan mata alguns dos personagens principais?</p>
+                <ul>
+                    <li>
+                        <input onclick="passar6(1)" type="radio" name="q6" value="The Day Will Come When You Won't Be">
+                        The Day Will Come When You
+                        Won't Be
+                    </li>
+                    <li>
+                        <input onclick="passar6(2)" type="radio" name="q6" value="Last Day on Earth">Last Day on Earth
+                    </li>
+                    <li>
+                        <input onclick="passar6(3)" type="radio" name="q6" value="The-Walking-Dead">The Walking Dead
+                    </li>
+                </ul>
+            </div>
+            <div class="quiz-hidden7" id="mostrarPergunta7">
+                <p>Pergunta 7: Rick Grimes foi morto por:</p>
+                <ul>
+                    <li>
+                        <input onclick="passar7(1)" type="radio" name="q7" value="Negan">Negan
+                    </li>
+                    <li>
+                        <input onclick="passar7(2)" type="radio" name="q7" value="Sussuradores">Sussuradores
+                    </li>
+                    <li>
+                        <input onclick="passar7(3)" type="radio" name="q7" value="Nenhuma">Nenhuma das alternativas
+                    </li>
+                </ul>
+            </div>
+            <div id="resultado" style="display: none;"></div>
+            <button onclick="Tentarnovamente()" id="tentativa" style="display: none;" class="tentar">Tentar Novamente</button>
         </div>
-        <div class="quiz-hidden">
-            <p>Pergunta 4: Quem era a irmã de Maggie?</p>
-            <ul>
-                <li>
-                    <input type="radio" name="q4" value="Beth Greene">Beth Greene
-                </li>
-                <li>
-                    <input type="radio" name="q4" value="Beth Greene">Carol Peletier
-                </li>
-                <li>
-                    <input type="radio" name="q4" value="Sasha Williams">Sasha Williams
-                </li>
-            </ul>
-        </div>
-        <div class="quiz-hidden">
-            <p>Pergunta 5: Qual personagem era médico antes do apocalipse?</p>
-            <ul>
-                <li>
-                    <input type="radio" name="q5" value="Verdadeiro">Hershel Greene
-                </li>
-                <li>
-                    <input type="radio" name="q5" value="Falso">Eugene Porter
-                </li>
-            </ul>
-        </div>
-        <div class="quiz-hidden"></div>
-        <p>Pergunta 6: Qual foi o nome do episódio em que Negan mata alguns dos personagens principais?</p>
-        <ul>
-            <li>
-                <input type="radio" name="q6" value="The Day Will Come When You Won't Be">
-                The Day Will Come When You
-                Won't Be
-            </li>
-            <li>
-                <input type="radio" name="q6" value="Last Day on Earth">Last Day on Earth
-            </li>
-            <li>
-                <input type="radio" name="q6" value="The-Walking-Dead">The Walking Dead
-            </li>
-        </ul>
-        </div>
-        <div class="quiz-hidden">
-            <p>Pergunta 7: Rick Grimes foi morto por:</p>
-            <ul>
-                <li>
-                    <input type="radio" name="q7" value="Negan">Negan
-                </li>
-                <li>
-                    <input type="radio" name="q7" value="Sussuradores">Sussuradores
-                </li>
-                <li>
-                    <input type="radio" name="q7" value="Nenhuma">Nenhuma das alternativas
-                </li>
-            </ul>
-        </div>
-        <button id="enviar">Enviar respostas</button>
-        <div id="resultado" style="display: none;"></div>
         </div>
     </main>
-    <link rel="stylesheet" href="app.js">
-    <link rel="stylesheet" href="dados.js">
-
 </body>
 
 </html>
+
+<script>
+    var acertos = 0;
+    var erros = 0;
+
+    function comecando() {
+        console.log("Quiz iniciado!");
+        comecarQuiz.style.display = 'none';
+        mostrarPergunta1.style.display = 'flex';
+
+        const respostasCorretas = [
+            'Rick Grimes', 'Policial', 'Verdadeiro',
+            'Beth Greene', 'Verdadeiro', 'The Day Will Come When You Won t Be',
+            'Nenhuma'
+        ];
+
+
+    }
+
+    function passar1(q1) {
+        mostrarPergunta1.style.display = 'none'
+        mostrarPergunta2.style.display = 'flex'
+
+        if (q1 == '1') {
+            acertos++
+        } else {
+            erros++
+        }
+    }
+
+    function passar2(q2) {
+        mostrarPergunta2.style.display = 'none'
+        mostrarPergunta3.style.display = 'flex'
+
+        if (q2 == '1') {
+            acertos++
+        } else {
+            erros++
+        }
+
+    }
+
+    function passar3(q3) {
+        mostrarPergunta3.style.display = 'none'
+        mostrarPergunta4.style.display = 'flex'
+
+        if (q3 == '1') {
+            acertos++
+        } else {
+            erros++
+        }
+    }
+
+    function passar4(q4) {
+        mostrarPergunta4.style.display = 'none'
+        mostrarPergunta5.style.display = 'flex'
+
+        if (q4 == '1') {
+            acertos++
+        } else {
+            erros++
+        }
+    }
+
+    function passar5(q5) {
+        mostrarPergunta5.style.display = 'none'
+        mostrarPergunta6.style.display = 'flex'
+
+        if (q5 == '1') {
+            acertos++
+        } else {
+            erros++
+        }
+    }
+
+    function passar6(q6) {
+        mostrarPergunta6.style.display = 'none'
+        mostrarPergunta7.style.display = 'flex'
+
+        if (q6 == '1') {
+            acertos++
+        } else {
+            erros++
+        }
+    }
+
+    function passar7(q7) {
+
+        if (q7 == '3') {
+            acertos++
+        } else {
+            erros++
+        }
+
+        mostrarPergunta7.style.display = 'none';
+        tentativa.style.display = 'flex';
+
+    }
+
+    function Tentarnovamente() {
+
+        return acertos;
+        return erros;
+
+        tentativa.style.display = 'none';
+        mostrarPergunta1.style.display = 'flex';
+    }
+</script>
