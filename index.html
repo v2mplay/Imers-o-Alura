@@ -242,7 +242,7 @@
         mostrarPergunta7.style.display = 'none';
         tentativa.style.display = 'flex';
         divmensagem.style.display = 'flex';
-        divmensagem.innerHTML += `
+        divmensagem.innerHTML = `
     Você acertou ${acertos} pergunta <br>
     E errou ${erros} pergunta`;
 
@@ -251,6 +251,11 @@
     }
 
     function Tentarnovamente() {
+
+        acertos = '';
+        erros = '';
+
+
         tentativa.style.display = 'none';
         mostrarPergunta1.style.display = 'flex';
         divmensagem.style.display = 'none';
